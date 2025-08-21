@@ -1,9 +1,9 @@
 import React from 'react'
-import Homenavbar from "../components/homenavbar"
-import Hero from '../components/Hero'
-import Features from '../components/Features'
-import FeaturedSkills from '../components/Featuredskills'
-import AboutSection from '../components/Aboutsection'
+import Homenavbar from "../components/HomepageComponents/homenavbar"
+import Hero from '../components/HomepageComponents/Hero'
+import Features from "../components/HomepageComponents/Features"
+import FeaturedSkills from "../components/HomepageComponents/Featuredskills"
+import AboutSection from "../components/HomepageComponents/Aboutsection"
 function homepage() {
   return (
     <div>
