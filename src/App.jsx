@@ -1,3 +1,9 @@
+import React from 'react'
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import './App.css'
+import Homepage from './pages/homepage'
+import ExploreSkills from './pages/ExploreSkills'
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -9,6 +15,13 @@ import Login from "./pages/Login";
 
 function App() {
   return (
+    <Router>
+      <Routes>
+      <Route path='/' element={<Homepage/>}/>
+        <Route path="/explore" element={<ExploreSkills/>} />
+      </Routes>
+    </Router>
+  )
     <div>
       <BrowserRouter>
         {/* Add Navbar here so it appears on all pages */}
