@@ -11,16 +11,26 @@ function Navbar() {
 
       {/* Nav Links */}
       <nav className="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="#" className="hover:text-pink-600 transition">Home</a>
-        <a href="#about" className="hover:text-pink-600 transition">About</a>
-        <a href="#services" className="hover:text-pink-600 transition">Services</a>
-        <a href="#contact" className="hover:text-pink-600 transition">Contact</a>
+        <a href="#" className="hover:text-pink-600 transition">
+          Home
+        </a>
+        <a href="#about" className="hover:text-pink-600 transition">
+          About
+        </a>
+        <a href="#services" className="hover:text-pink-600 transition">
+          Services
+        </a>
+        <a href="#contact" className="hover:text-pink-600 transition">
+          Contact
+        </a>
       </nav>
 
       {/* Buttons */}
       <div className="flex space-x-4">
         <button className="px-4 py-2 rounded-full border border-pink-600 text-pink-600 hover:bg-pink-50 transition">
-          Login
+          <a href="/login" className="hover:text-pink-600 transition">
+            Login
+          </a>
         </button>
         <button className="px-4 py-2 rounded-full bg-pink-600 text-white hover:bg-pink-700 shadow-md transition">
           Register
