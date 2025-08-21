@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -28,7 +29,7 @@ function Hero() {
 
           <div className="mt-6 sm:mt-8 flex flex-wrap gap-4">
             <button className="px-5 py-2 sm:px-6 sm:py-3 rounded-full bg-pink-600 text-white font-medium shadow-lg hover:bg-pink-700 transition text-sm sm:text-base">
-              Explore Skills
+              <Link to="/explore">Explore Skills</Link>
             </button>
           </div>
         </div>
