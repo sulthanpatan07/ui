@@ -3,7 +3,10 @@ import Homenavbar from "../components/HomepageComponents/homenavbar"
 import Hero from '../components/HomepageComponents/Hero'
 import Features from "../components/HomepageComponents/Features"
 import FeaturedSkills from "../components/HomepageComponents/Featuredskills"
-import AboutSection from "../components/HomepageComponents/Aboutsection"
+import Testimonials from '../components/HomepageComponents/Testinomials'
+import CallToAction from '../components/HomepageComponents/CalltoAction'
+import HomeFooter from '../components/HomepageComponents/HomeFooter'
+
 function homepage() {
   return (
     <div>
@@ -11,7 +14,9 @@ function homepage() {
         <Hero/>
         <Features/>
         <FeaturedSkills/>
-        <AboutSection/>
+        <Testimonials/>
+        <CallToAction/>
+        <HomeFooter/>
     </div>
   )
 }

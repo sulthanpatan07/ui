@@ -30,9 +30,6 @@ function Hero() {
             <button className="px-5 py-2 sm:px-6 sm:py-3 rounded-full bg-pink-600 text-white font-medium shadow-lg hover:bg-pink-700 transition text-sm sm:text-base">
               Explore Skills
             </button>
-            <button className="px-5 py-2 sm:px-6 sm:py-3 rounded-full border border-pink-600 text-pink-600 font-medium hover:bg-pink-50 transition text-sm sm:text-base">
-              Post Your Skill
-            </button>
           </div>
         </div>
       </div>
