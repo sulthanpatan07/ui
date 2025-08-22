@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
+<<<<<<< HEAD
 import ExploreSkills from "./pages/ExploreSkills";
 import Homepage from "./pages/homepage";
 import Register from "./pages/Register";
@@ -27,6 +28,21 @@ function App() {
       </Router>
     </div>
   );
+=======
+import { Contact } from 'lucide-react';
+
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+      <Route path='/' element={<Homepage/>}/>
+        <Route path="/explore" element={<ExploreSkills/>} />
+       
+      </Routes>
+    </Router>
+  )
+>>>>>>> cb70100e581147d61c5d4fe5a1a8301d246f1a55
 }
 
 export default App;
