@@ -4,6 +4,8 @@ import './App.css'
 import Homepage from './pages/homepage'
 import ExploreSkills from './pages/ExploreSkills'
 
+import { Contact } from 'lucide-react';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Routes>
       <Route path='/' element={<Homepage/>}/>
         <Route path="/explore" element={<ExploreSkills/>} />
+       
       </Routes>
     </Router>
   )
