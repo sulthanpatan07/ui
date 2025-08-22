@@ -118,23 +118,37 @@ export default function AnimatedRegistrationPage() {
     if (Object.keys(newErrors).length === 0) {
       setIsLoading(true);
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      console.log("Registration data:", formData);
-      setIsLoading(false);
-      setIsSuccess(true);
-
-      // Reset form after success animation
-      setTimeout(() => {
-        setIsSuccess(false);
-        setFormData({
-          username: "",
-          gender: "",
-          email: "",
-          password: "",
+      try {
+        const response = await fetch("http://localhost:5000/register", {
+          // replace localhost with your backend URL when deployed
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
         });
-      }, 3000);
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          setErrors({ submit: data.message || "Registration failed" });
+        } else {
+          setIsSuccess(true);
+          setTimeout(() => {
+            setIsSuccess(false);
+            setFormData({
+              username: "",
+              gender: "",
+              email: "",
+              password: "",
+            });
+          }, 3000);
+        }
+      } catch (error) {
+        setErrors({ submit: "Network error. Please try again." });
+      }
+
+      setIsLoading(false);
     } else {
       setErrors(newErrors);
       // Shake animation for errors
@@ -224,6 +238,13 @@ export default function AnimatedRegistrationPage() {
 
           {/* Form */}
           <div className="space-y-6">
+            {/* Add submit server error */}
+            {errors.submit && (
+              <p className="mt-2 text-sm text-red-600 animate-slideInDown">
+                {errors.submit}
+              </p>
+            )}
+
             {/* Username Field */}
             <div className="transform transition-all duration-500 delay-300">
               <label
@@ -269,7 +290,7 @@ export default function AnimatedRegistrationPage() {
                 Gender
               </label>
               <div className="grid grid-cols-3 gap-3">
-                {["male", "female", "other"].map((option, index) => (
+                {["male", "female", "other"].map((option) => (
                   <label
                     key={option}
                     className={`relative cursor-pointer transform transition-all duration-300 hover:scale-105 ${
@@ -491,7 +512,7 @@ export default function AnimatedRegistrationPage() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes slideInDown {
           from {
             opacity: 0;

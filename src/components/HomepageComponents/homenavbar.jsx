@@ -30,19 +30,19 @@ function Navbar() {
           Home
         </Link>
         <Link
-          to="/#about"
+          to="/about"
           className="hover:text-pink-600 transition-colors duration-200"
         >
           About
         </Link>
         <Link
-          to="/#services"
+          to="/explore"
           className="hover:text-pink-600 transition-colors duration-200"
         >
           Services
         </Link>
         <Link
-          to="/#contact"
+          to="/contact"
           className="hover:text-pink-600 transition-colors duration-200"
         >
           Contact
